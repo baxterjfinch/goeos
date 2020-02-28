@@ -8,9 +8,7 @@ import (
 func main() {
 	fmt.Println("Hello, world.")
 
-    connection := rpc.RPCDetails {
-        Endpoint: "http://localhost:8888",
-    }
+    api := eosapi.New("http://localhost:8888")
 
-    connection.FetchConnection()
+    fmt.Println(api)
 }
